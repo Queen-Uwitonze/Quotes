@@ -1,0 +1,15 @@
+<!-- <p>quote-details works!</p> -->
+<p class="author">Author is {{ quote.author }}</p>
+<p class="author">Submited by {{ quote.submittedBy }}</p>
+<p>{{ quote.upVote }}</p>
+<button class="btn btn-success " (click)="quote.upVote = quote.upVote + 1">
+  Likes
+</button>
+
+<p>{{ quote.downVote }}</p>
+<button class="btn btn-success " (click)="quote.downVote = quote.downVote + 1">
+  Dislikes</button
+><br />
+<p>This Quote will be completed in {{ quote.completeDate | dateCount }} days</p>
+<button class="btn btn-default " (click)="quoteDelete(true)">Delete</button>
+<button class="btn btn-default " (click)="saveNewQuote($event)">Save</button>

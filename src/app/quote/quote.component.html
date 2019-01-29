@@ -1,0 +1,26 @@
+<!-- <p>quote works!</p> -->
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to {{ title }} App!</h1>
+      <p>You can add your best quotes here</p>
+    </div>
+    <div class="row" *ngFor="let quote of quotes; let i = index">
+      <h4 id="{{ i }}">
+        ** {{ quote.name }} due on {{ quote.completeDate | date }}
+      </h4>
+
+      <button class="btn btn-warning" (click)="toogleDetails(i)">More</button>
+      <app-quote-details
+        *ngIf="quote.showDescription"
+        [quote]="quote"
+        (isComplete)="deleteQuote($event, i)"
+      ></app-quote-details>
+    </div>
+
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>
