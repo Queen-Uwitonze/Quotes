@@ -9,5 +9,17 @@
   Dislikes</button
 ><br />
 <p>This Quote will be completed in {{ quote.completeDate | dateCount }} days</p>
-<button class="btn btn-default " (click)="quoteDelete(true)">Delete</button>
-<button class="btn btn-default " (click)="saveNewQuote($event)">Save</button>
+<button
+  class="btn 
+.btn-info "
+  (click)="quoteDelete(true)"
+>
+  Delete
+</button>
+<button
+  class="btn 
+.btn-info "
+  (click)="saveNewQuote($event)"
+>
+  Save
+</button>

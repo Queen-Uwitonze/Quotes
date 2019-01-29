@@ -11,7 +11,7 @@
         ** {{ quote.name }} due on {{ quote.completeDate | date }}
       </h4>
 
-      <button class="btn btn-warning" (click)="toogleDetails(i)">More</button>
+      <button class="btn btn-link" (click)="toogleDetails(i)">For more</button>
       <app-quote-details
         *ngIf="quote.showDescription"
         [quote]="quote"
