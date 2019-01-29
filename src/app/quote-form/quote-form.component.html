@@ -3,27 +3,9 @@
 <div class="container-fluid" style="text-align:center">
   <div class="row">
     <form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
-      <!-- Name Form -->
-      <div class="form-group">
-        <label for="name">submitted by</label>
-        <textarea
-          type="text"
-          class="form-control"
-          id="name"
-          [(ngModel)]="newQuote.submittedBy"
-          name="name"
-          #name="ngModel"
-          required
-        ></textarea>
-
-        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          <p>submitted by</p>
-        </div>
-      </div>
-
       <!-- new Quote Input -->
       <div class="form-group">
-        <label for="description">add new Quote</label>
+        <label for="description">Enter new Quote</label>
         <textarea
           class="form-control"
           id="description"
@@ -40,7 +22,7 @@
           <p>Description is Required</p>
         </div>
       </div>
-
+      <!-- Name Form -->
       <div class="form-group">
         <label for="name">Author</label>
         <textarea
@@ -75,6 +57,26 @@
           alert-danger"
         >
           <p>Complete Date is Required</p>
+        </div>
+
+        <div class="form-group">
+          <label for="name">submitted by</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="newQuote.submittedBy"
+            name="name"
+            #name="ngModel"
+            required
+          ></textarea>
+
+          <div
+            [hidden]="name.valid || name.pristine"
+            class="alert alert-danger"
+          >
+            <p>submitted by</p>
+          </div>
         </div>
       </div>
       <button type="Submit" class="btn btn-info btn-lg">Add Quote</button>

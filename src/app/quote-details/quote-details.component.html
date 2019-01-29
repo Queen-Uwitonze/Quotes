@@ -2,9 +2,7 @@
 <p class="author">Author is {{ quote.author }}</p>
 <p class="author">Submited by {{ quote.submittedBy }}</p>
 <p>{{ quote.upVote }}</p>
-<button class="btn btn-success " (click)="quote.upVote = quote.upVote + 1">
-  Likes
-</button>
+<button class="btn btn-success " (click)="upVote()">Likes</button>
 
 <p>{{ quote.downVote }}</p>
 <button class="btn btn-success " (click)="quote.downVote = quote.downVote + 1">

@@ -4,7 +4,7 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Welcome to {{ title }} App!</h1>
-      <p>You can add your best quotes here</p>
+      <p id="para">You can add your best quotes here...</p>
     </div>
     <div class="row" *ngFor="let quote of quotes; let i = index">
       <h4 id="{{ i }}">

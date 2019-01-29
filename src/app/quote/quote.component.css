@@ -1,10 +1,14 @@
 .container {
   background-color: bisque;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Lora", serif;
 }
 h1 {
   color: green;
 }
 p {
   font-size: 500;
+}
+#para {
+  background-color: blanchedalmond;
+  padding: 10px;
 }
