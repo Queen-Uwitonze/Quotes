@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { Quote } from "../quote";
+import { $ } from "protractor";
 
 @Component({
   selector: "app-quote-details",
@@ -12,6 +13,7 @@ export class QuoteDetailsComponent implements OnInit {
 
   upVote() {
     this.quote.upVote++;
+    let upVote = confirm(`great choise`);
   }
 
   quoteDelete(complete: boolean) {
